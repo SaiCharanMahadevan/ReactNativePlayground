@@ -55,11 +55,11 @@ export default class SearchResults extends Component {
     };
   }
 
-  showBookingDetail(book, image, volumeinfo) {
+  showBookingDetail(image, volumeinfo) {
     this.props.navigator.push({
       title: volumeinfo.tile,
       component: BookDetail,
-      passProps: { book: book, image: image, description: _.get(volumeinfo, 'description', 'N/A')}
+      passProps: { image: image, description: _.get(volumeinfo, 'description', 'N/A')}
     })
   }
   
@@ -74,7 +74,7 @@ export default class SearchResults extends Component {
 
     return (
       <TouchableHighlight
-        onPress={() => this.showBookingDetail(book, processedThumbnail, volumeinfo)}
+        onPress={() => this.showBookingDetail(processedThumbnail, volumeinfo)}
         underlayColor='#dddddd'>
         <View>
           <View style={styles.cellContainer}>
