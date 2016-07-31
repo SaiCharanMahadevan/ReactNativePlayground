@@ -24,7 +24,6 @@ export default class BookDetail extends Component {
   }
 
   render() {
-    const book = this.props.book;
     const imageURI = this.props.image ? this.props.image : '';
     const description = this.props.description ? this.props.description : '';
     return (
